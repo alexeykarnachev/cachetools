@@ -13,8 +13,8 @@ def _choice(seq):
 class RRCache(Cache):
     """Random Replacement (RR) cache implementation."""
 
-    def __init__(self, maxsize, choice=random.choice, getsizeof=None):
-        Cache.__init__(self, maxsize, getsizeof)
+    def __init__(self, maxsize, choice=random.choice, getsizeof=None, manager=None):
+        Cache.__init__(self, maxsize, getsizeof, manager=manager)
         # TODO: use None as default, assing to self.choice directly?
         if choice is random.choice:
             self.__choice = _choice

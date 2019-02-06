@@ -2,7 +2,7 @@ import unittest
 
 from cachetools import TTLCache
 
-from . import CacheTestMixin
+from tests import CacheTestMixin
 
 
 class Timer:

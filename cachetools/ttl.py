@@ -61,8 +61,8 @@ class _Timer(object):
 class TTLCache(Cache):
     """LRU Cache implementation with per-item time-to-live (TTL) value."""
 
-    def __init__(self, maxsize, ttl, timer=default_timer, getsizeof=None):
-        Cache.__init__(self, maxsize, getsizeof)
+    def __init__(self, maxsize, ttl, timer=default_timer, getsizeof=None, manager=None):
+        Cache.__init__(self, maxsize, getsizeof, manager=manager)
         self.__root = root = _Link()
         root.prev = root.next = root
         self.__links = collections.OrderedDict()

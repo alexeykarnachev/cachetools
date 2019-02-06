@@ -2,7 +2,7 @@ import unittest
 
 from cachetools import LRUCache
 
-from . import CacheTestMixin
+from tests import CacheTestMixin
 
 
 class LRUCacheTest(unittest.TestCase, CacheTestMixin):

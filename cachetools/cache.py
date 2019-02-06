@@ -19,12 +19,12 @@ class Cache(DefaultMapping):
 
     __size = _DefaultSize()
 
-    def __init__(self, maxsize, getsizeof=None):
+    def __init__(self, maxsize, getsizeof=None, manager=None):
         if getsizeof:
             self.getsizeof = getsizeof
         if self.getsizeof is not Cache.getsizeof:
             self.__size = dict()
-        self.__data = dict()
+        self.__data = dict() if manager is None else manager.dict()
         self.__currsize = 0
         self.__maxsize = maxsize
 

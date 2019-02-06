@@ -1,8 +1,7 @@
 import unittest
 
 from cachetools import LFUCache
-
-from . import CacheTestMixin
+from tests import CacheTestMixin
 
 
 class LFUCacheTest(unittest.TestCase, CacheTestMixin):

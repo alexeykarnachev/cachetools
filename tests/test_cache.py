@@ -2,7 +2,7 @@ import unittest
 
 import cachetools
 
-from . import CacheTestMixin
+from tests import CacheTestMixin
 
 
 class CacheTest(unittest.TestCase, CacheTestMixin):
